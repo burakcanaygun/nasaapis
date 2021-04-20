@@ -8,8 +8,10 @@ const ApodCard = ({date, explanation, hdurl, media_type, title, url}) => {
 
             <div className="card-image box">
                 <figure className="image is-4by3">
-                    <img src={hdurl}
-                         alt={title}/>
+                    {media_type === "image" ? <img src={hdurl} alt={title}/> :
+                        <iframe className="has-ratio" width="640" height="360"
+                        src={url} frameBorder="0" title={title}
+                        allowFullScreen/>}
                 </figure>
             </div>
             <div className="card-content">

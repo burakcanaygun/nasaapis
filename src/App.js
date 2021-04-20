@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Home from './components/layout/pages/Home';
 import Apod from './components/layout/apod/Apod';
-
+import Neows from "./components/layout/neows/Neows";
 const App = () => {
 
   return (
@@ -19,6 +19,7 @@ const App = () => {
               <Switch>
                 <Route exact path='/' component={Home}/>
                 <Route exact path='/apod' component={Apod}/>
+                <Route exact path={'/neows'} component={Neows}/>
               </Switch>
 
             </div>

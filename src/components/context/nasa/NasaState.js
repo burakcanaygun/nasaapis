@@ -33,7 +33,7 @@ const NasaState = props => {
     //getApod
     const getApod = async () => {
         setLoading();
-        const res = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_API_KEY}`);
+        const res = await axios.get(`${process.env.REACT_APP_NASA_URL}/planetary/apod?api_key=${process.env.REACT_APP_NASA_API_KEY}`);
         dispatch({
             type: GET_APOD,
             payload: res.data

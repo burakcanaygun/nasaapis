@@ -20,6 +20,7 @@ const Apod = () => {
     if (loading) {
         return <Loading/>
     } else {
+
         return (
             <div>
                 <ApodCard date={date} explanation={explanation} hdurl={hdurl} media_type={media_type} title={title} url={url}/>
